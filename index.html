@@ -25,7 +25,7 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
         }
         
@@ -37,18 +37,6 @@
             border-radius: 15px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(52, 152, 219, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #3498db, #9b59b6, #e74c3c, #f1c40f, #2ecc71);
         }
         
         h1 {
@@ -57,193 +45,128 @@
             background: linear-gradient(90deg, #3498db, #9b59b6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            color: #bdc3c7;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .banner-container {
+
+        /* Contenedor especial para el anuncio 728x90 en móvil */
+        .ad-top-728 {
+            width: 100%;
+            overflow-x: auto;
             display: flex;
             justify-content: center;
-            margin-bottom: 40px;
+            margin-bottom: 25px;
+            padding: 10px 0;
         }
-        
-        .banner {
-            width: 468px;
-            height: 60px;
-            background: linear-gradient(135deg, #3498db, #2c3e50);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-        
-        .banner:hover {
-            transform: translateY(-3px);
-        }
-        
-        .faucet-section {
+
+        .main-layout {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
+            grid-template-columns: 1fr 240px;
+            gap: 20px;
+            margin-bottom: 20px;
         }
-        
+
+        .left-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
         .faucet-card {
             background: rgba(23, 42, 58, 0.8);
             border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             padding: 25px;
-            transition: all 0.3s ease;
             border: 1px solid rgba(52, 152, 219, 0.2);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
         }
-        
-        .faucet-card:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-            border-color: rgba(52, 152, 219, 0.5);
-        }
-        
+
         .faucet-header {
             display: flex;
             align-items: center;
             margin-bottom: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid rgba(52, 152, 219, 0.3);
         }
-        
+
         .faucet-number {
-            background: linear-gradient(135deg, #3498db, #2980b9);
+            background: #3498db;
             color: white;
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
             margin-right: 15px;
-            box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+            font-weight: bold;
         }
-        
-        .faucet-card h2 {
-            color: #3498db;
-            font-size: 1.6rem;
-            margin-bottom: 0;
-        }
-        
-        .faucet-card p {
-            color: #bdc3c7;
-            margin-bottom: 20px;
-            line-height: 1.6;
-            flex-grow: 1;
-        }
-        
+
         .features {
             margin: 15px 0;
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
         }
-        
+
         .feature {
             background: rgba(41, 128, 185, 0.2);
             color: #3498db;
-            padding: 5px 10px;
+            padding: 5px 12px;
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             border: 1px solid rgba(52, 152, 219, 0.3);
         }
-        
+
         .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #3498db, #2980b9);
+            display: inline-block;
+            background: #3498db;
             color: white;
-            padding: 12px 25px;
+            padding: 12px 20px;
             border-radius: 8px;
             text-decoration: none;
+            text-align: center;
             font-weight: bold;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
-            margin-top: auto;
         }
-        
-        .btn:hover {
-            background: linear-gradient(135deg, #2980b9, #1f639e);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
+
+        /* Estilos de Anuncios */
+        .ad-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
         }
-        
-        .btn i {
-            margin-right: 8px;
-        }
-        
+
         footer {
             text-align: center;
-            margin-top: 50px;
-            padding: 25px;
-            color: #7f8c8d;
-            font-size: 0.9rem;
-            background: rgba(13, 27, 42, 0.8);
-            border-radius: 10px;
-            border: 1px solid rgba(52, 152, 219, 0.2);
-        }
-        
-        .disclaimer {
-            max-width: 800px;
-            margin: 0 auto 15px;
+            margin-top: 40px;
+            padding: 20px;
             font-size: 0.85rem;
-            color: #95a5a6;
+            color: #7f8c8d;
         }
-        
-        @media (max-width: 768px) {
-            .faucet-section {
-                grid-template-columns: 1fr;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            .banner {
-                width: 100%;
-                max-width: 468px;
-            }
-        }
-        
+
         .crypto-icons {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin: 20px 0;
-            font-size: 2rem;
+            gap: 15px;
+            margin-top: 15px;
+            font-size: 1.5rem;
             color: #3498db;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            .right-column {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
+
     <div class="container">
         <header>
             <h1>Faucets 2026</h1>
             <p class="subtitle">Descubre las mejores plataformas para ganar criptomonedas gratis de forma segura y confiable</p>
-            
             <div class="crypto-icons">
                 <i class="fab fa-bitcoin"></i>
                 <i class="fab fa-ethereum"></i>
@@ -252,126 +175,66 @@
                 <i class="fas fa-wallet"></i>
             </div>
         </header>
-        
-        <div class="banner-container">
-            <div class="banner">Faucet #1</div>
-        </div>
-        
-        <div class="faucet-section">
-            <div class="faucet-card">
-                <div class="faucet-header">
-                    <div class="faucet-number">1</div>
-                    <h2>Vie Faucet</h2>
-                </div>
-                <p>Pagos altos - Pagos instantáneos - Múltiples monedas, reclamos cada 4 minutos, PTC, Shortlinks, ofertas, desafíos y bono diario.</p>
-                <div class="features">
-                    <span class="feature">Pagos Altos</span>
-                    <span class="feature">Múltiples Monedas</span>
-                    <span class="feature">Reclamos cada 4 min</span>
-                </div>
-                <a href="https://viefaucet.com?r=67f3d36764c6bc92ad63b030" class="btn" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> Visitar Faucet
-                </a>
-            </div>
-            
-            <div class="faucet-card">
-                <div class="faucet-header">
-                    <div class="faucet-number">2</div>
-                    <h2>Satoshitap</h2>
-                </div>
-                <p>Vea anuncios y gane criptomonedas al instante. Ganancias fáciles desde casa. Anuncios diarios garantizados. Recomienda a tus amigos y gana más. Pagos instantáneos a través de procesadores de criptomonedas confiables. Mínimo de retiro bajo.</p>
-                <div class="features">
-                    <span class="feature">Anuncios Diarios</span>
-                    <span class="feature">Pagos Instantáneos</span>
-                    <span class="feature">Mínimo Bajo</span>
-                </div>
-                <a href="https://www.satoshitap.com/ref/Pussy99" class="btn" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> Visitar Faucet
-                </a>
-            </div>
-            
-            <div class="faucet-card">
-                <div class="faucet-header">
-                    <div class="faucet-number">3</div>
-                    <h2>ADDOMY</h2>
-                </div>
-                <p>Ganancias fáciles por ver anuncios. Retiros en Doge coin a FaucetPay. 10% del coste de los enlaces vistos por tus referidos. ¡El 5% del importe gastado por los referidos en publicidad!.</p>
-                <div class="features">
-                    <span class="feature">Ganancias Fáciles</span>
-                    <span class="feature">Sistema de Referidos</span>
-                    <span class="feature">Retiros en Doge</span>
-                </div>
-                <a href="https://addomy.com/?r=39794" class="btn" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> Visitar Faucet
-                </a>
+
+        <div class="ad-top-728">
+            <div style="min-width: 728px;">
+                <script src="//static.surfe.pro/js/net.js"></script>
+                <ins class="surfe-be" data-sid="419358"></ins>
+                <script>(adsurfebe = window.adsurfebe || []).push({});</script>
             </div>
         </div>
-        
-        <div class="faucet-section">
-            <div class="faucet-card">
-                <div class="faucet-header">
-                    <div class="faucet-number">4</div>
-                    <h2>Faucetcrypto</h2>
+
+        <div class="main-layout">
+            <div class="left-column">
+                <div class="faucet-card">
+                    <div class="faucet-header">
+                        <div class="faucet-number">1</div>
+                        <h2>CriptoETH</h2>
+                    </div>
+                    <p>Pagos altos - Pagos instantáneos - Múltiples monedas, PTC, Shortlinks, ofertas, Faucet.</p>
+                    <div class="features">
+                        <span class="feature">Free Bitcoin</span>
+                        <span class="feature">Free ETH</span>
+                        <span class="feature">Free USDT</span>
+                    </div>
+                    <a href="https://criptoeth.bitcotasks.com" class="btn" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Visitar Faucet
+                    </a>
                 </div>
-                <p>Buscas una faucet fácil de usar para criptomonedas gratis? ¿Qué esperas? ¡Consigue tus monedas gratis hoy mismo! 25 criptomonedas disponibles.</p>
-                <div class="features">
-                    <span class="feature">Fácil de Usar</span>
-                    <span class="feature">25 Criptomonedas</span>
-                    <span class="feature">Monedas Gratis</span>
+
+                <div class="ad-box">
+                    <script src="//static.surfe.pro/js/net.js"></script>
+                    <ins class="surfe-be" data-sid="419360"></ins>
+                    <script>(adsurfebe = window.adsurfebe || []).push({});</script>
                 </div>
-                <a href="https://faucetcrypto.com/r/10011970" class="btn" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> Visitar Faucet
-                </a>
             </div>
-            
-            <div class="faucet-card">
-                <div class="faucet-header">
-                    <div class="faucet-number">5</div>
-                    <h2>Free-Bonk</h2>
+
+            <div class="right-column">
+                <div class="ad-box">
+                    <script src="//static.surfe.pro/js/net.js"></script>
+                    <ins class="surfe-be" data-sid="419359"></ins>
+                    <script>(adsurfebe = window.adsurfebe || []).push({});</script>
                 </div>
-                <p>Gana Memecoins en Microsegundos. Una plataforma rápida y eficiente para obtener memecoins de forma instantánea.</p>
-                <div class="features">
-                    <span class="feature">Memecoins</span>
-                    <span class="feature">Ganancias Rápidas</span>
-                    <span class="feature">Microsegundos</span>
-                </div>
-                <a href="https://free-bonk.com/dashboard" class="btn" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> Visitar Faucet
-                </a>
             </div>
         </div>
-        
+
+        <div class="ad-box">
+            <script src="//static.surfe.pro/js/net.js"></script>
+            <ins class="surfe-be" data-sid="419361"></ins>
+            <script>(adsurfebe = window.adsurfebe || []).push({});</script>
+        </div>
+
+        <div class="ad-box">
+            <script src="//static.surfe.pro/js/net.js"></script>
+            <ins class="surfe-be" data-sid="419362"></ins>
+            <script>(adsurfebe = window.adsurfebe || []).push({});</script>
+        </div>
+
         <footer>
             <p class="disclaimer">Esta página contiene enlaces de referencia. Al utilizar estos enlaces, puedes apoyar al creador de esta página sin costo adicional para ti. Siempre investiga antes de invertir tiempo o dinero en cualquier plataforma.</p>
-            <p>© 2025 - Mejores Faucets de Criptomonedas. Todos los derechos reservados.</p>
+            <p>© 2026 - CriptoETH. Todos los derechos reservados.</p>
         </footer>
     </div>
 
-    <script>
-        // Efecto de aparición suave para las tarjetas
-        document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.faucet-card');
-            
-            cards.forEach((card, index) => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                
-                setTimeout(() => {
-                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, 200 * index);
-            });
-            
-            // Efecto para el banner
-            const banner = document.querySelector('.banner');
-            banner.style.opacity = '0';
-            
-            setTimeout(() => {
-                banner.style.transition = 'opacity 0.8s ease';
-                banner.style.opacity = '1';
-            }, 300);
-        });
-    </script>
 </body>
-    </html>
+</html>
