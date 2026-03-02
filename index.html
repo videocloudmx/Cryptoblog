@@ -1,158 +1,113 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mejores Faucets de Criptomonedas 2026</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #1a2a3a, #0d1b2a);
-            color: #e0e0e0;
-            line-height: 1.6;
-            padding: 20px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .container {
-            max-width: 1000px;
-            width: 100%;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        /* Contenedor para el banner 728x90 */
-        .ad-728-container {
-            width: 100%;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            margin: 10px 0 20px 0;
-        }
-
-        .ad-728-wrapper {
-            min-width: 728px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .main-layout {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-
-        .faucet-card {
-            background: rgba(23, 42, 58, 0.8);
-            border-radius: 12px;
-            padding: 25px;
-            border: 1px solid rgba(52, 152, 219, 0.2);
-            width: 100%;
-            max-width: 600px;
-        }
-
-        .ad-box {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 15px 0;
-            width: 100%;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            font-size: 0.85rem;
-            color: #7f8c8d;
-        }
-    </style>
+<style>
+  .ad-container {
+    text-align: center;
+    margin: 10px 0;
+    width: 100%;
+    overflow-x: auto; /* Permite scroll si el banner es más ancho que la pantalla */
+    -webkit-overflow-scrolling: touch;
+  }
+  .flex-ads {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+</style>
 </head>
 <body>
 
-    <script src="https://pl28795852.effectivegatecpm.com/35/27/31/3527312a7b28e029e18b12111b8378f7.js"></script>
+  <div class="ad-container">
+    <script>
+      fetch('https://zerads.com/ad/ad.php?ref=10822&width=728')
+        .then(response => response.text())
+        .then(data => {
+          const elements = document.querySelectorAll('[id="ZerAds728"]');
+          for (const element of elements) {
+              if (element.style.display === 'none') {
+              element.style.display = 'inline-block';
+              if(data.includes("*BLANK*") == false) {
+              data = data.replace('<meta http-equiv="refresh" content="280">', '');
+              element.innerHTML = "<iframe style='border:none;' width='728' height='90'></iframe>";
+              element.querySelector('iframe').srcdoc = data;
+              } else {
+              element.innerHTML = "<a href='https://zerads.com/index.php?view=site&id=10822' target='_blank'><div style='width: 728px; height: 90px; background-color: rgba(200, 200, 200, 0.1); position: relative;'><div style='position: absolute; color: #999; font-size: 48px; top: 20%; left: 27%; font-family: Arial; '><i>Advertise Here</i></div></div></a>";
+              }
+              break;
+              }
+          }
+        });
+    </script>
+    <div id="ZerAds728" style="display: none;"></div>
+  </div>
 
-    <div class="container">
+  <div class="ad-container">
+    <div id="ZerAds728" style="display: none;"></div>
+  </div>
 
-        <div class="ad-728-container">
-            <div class="ad-728-wrapper">
-                <script type="text/javascript">
-                    atOptions = {
-                        'key' : '9924170b7eaea874b5ddf5e7d1f06c8b',
-                        'format' : 'iframe',
-                        'height' : 90,
-                        'width' : 728,
-                        'params' : {}
-                    };
-                </script>
-                <script type="text/javascript" src="https://www.highperformanceformat.com/9924170b7eaea874b5ddf5e7d1f06c8b/invoke.js"></script>
-            </div>
-        </div>
+  <hr style="border:0; margin:10px;">
 
-        <div class="ad-box">
-            <script type="text/javascript">
-                atOptions = {
-                    'key' : '2d024d7fefecc4145344c1902e98a4b9',
-                    'format' : 'iframe',
-                    'height' : 250,
-                    'width' : 300,
-                    'params' : {}
-                };
-            </script>
-            <script type="text/javascript" src="https://www.highperformanceformat.com/2d024d7fefecc4145344c1902e98a4b9/invoke.js"></script>
-        </div>
+  <div class="ad-container">
+    <script>
+      fetch('https://zerads.com/ad/ad.php?ref=10822&width=468')
+        .then(response => response.text())
+        .then(data => {
+          const elements = document.querySelectorAll('[id="ZerAds468"]');
+          for (const element of elements) {
+              if (element.style.display === 'none') {
+              element.style.display = 'inline-block';
+              if(data.includes("*BLANK*") == false) {
+              data = data.replace('<meta http-equiv="refresh" content="280">', '');
+              element.innerHTML = "<iframe style='border:none;' width='468' height='60'></iframe>";
+              element.querySelector('iframe').srcdoc = data;
+              } else {
+              element.innerHTML = "<a href='https://zerads.com/index.php?view=site&id=10822' target='_blank'><div style='width: 468px; height: 60px; background-color: rgba(200, 200, 200, 0.1); position: relative;'><div style='position: absolute; color: #999; font-size: 30px; top: 17%; left: 28%; font-family: Arial; '><i>Advertise Here</i></div></div></a>";
+              }
+              break;
+              }
+          }
+        });
+    </script>
+    <div id="ZerAds468" style="display: none;"></div>
+  </div>
 
-        <div class="main-layout">
-            <div class="faucet-card">
-                <h2>CriptoETH</h2>
-                <p>Pagos altos - Pagos instantáneos - Múltiples monedas, PTC, Shortlinks, ofertas, Faucet.</p>
-                <a href="https://criptoeth.bitcotasks.com" class="btn" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> Visitar Faucet
-                </a>
-            </div>
+  <div class="ad-container">
+    <div id="ZerAds468" style="display: none;"></div>
+  </div>
 
-            <div class="ad-box">
-                <script type="text/javascript">
-                    atOptions = {
-                        'key' : '685bad3cfc7e00a7af8026c7632f710c',
-                        'format' : 'iframe',
-                        'height' : 50,
-                        'width' : 320,
-                        'params' : {}
-                    };
-                </script>
-                <script type="text/javascript" src="https://www.highperformanceformat.com/685bad3cfc7e00a7af8026c7632f710c/invoke.js"></script>
-            </div>
-        </div>
+  <hr style="border:0; margin:10px;">
 
-        <footer>
-            <p>© 2026 - CriptoETH. Todos los derechos reservados.</p>
-        </footer>
+  <div class="flex-ads">
+    <div class="ad-container" style="width: auto;">
+      <script>
+        fetch('https://zerads.com/ad/ad.php?ref=10822&width=300')
+          .then(response => response.text())
+          .then(data => {
+            const elements = document.querySelectorAll('[id="ZerAds300"]');
+            for (const element of elements) {
+                if (element.style.display === 'none') {
+                element.style.display = 'inline-block';
+                if(data.includes("*BLANK*") == false) {
+                data = data.replace('<meta http-equiv="refresh" content="280">', '');
+                element.innerHTML = "<iframe style='border:none;' width='300' height='250'></iframe>";
+                element.querySelector('iframe').srcdoc = data;
+                } else {
+                element.innerHTML = "<a href='https://zerads.com/index.php?view=site&id=10822' target='_blank'><div style='width: 300px; height: 250px; background-color: rgba(200, 200, 200, 0.1); position: relative;'><div style='position: absolute; color: #999; font-size: 30px; top: 37%; left: 17%; font-family: Arial; '><i>Advertise Here</i></div></div></a>";
+                }
+                break;
+                }
+            }
+          });
+      </script>
+      <div id="ZerAds300" style="display: none;"></div>
     </div>
+
+    <div class="ad-container" style="width: auto;">
+      <div id="ZerAds300" style="display: none;"></div>
+    </div>
+  </div>
 
 </body>
 </html>
