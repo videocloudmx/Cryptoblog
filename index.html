@@ -1,113 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<style>
-  .ad-container {
-    text-align: center;
-    margin: 10px 0;
-    width: 100%;
-    overflow-x: auto; /* Permite scroll si el banner es más ancho que la pantalla */
-    -webkit-overflow-scrolling: touch;
-  }
-  .flex-ads {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con popunder</title>
 </head>
 <body>
+    <h1>Bienvenido</h1>
+    <p>Loading site....</p>
 
-  <div class="ad-container">
+    <!-- Script de popunder (se ejecuta al primer clic) -->
     <script>
-      fetch('https://zerads.com/ad/ad.php?ref=10822&width=728')
-        .then(response => response.text())
-        .then(data => {
-          const elements = document.querySelectorAll('[id="ZerAds728"]');
-          for (const element of elements) {
-              if (element.style.display === 'none') {
-              element.style.display = 'inline-block';
-              if(data.includes("*BLANK*") == false) {
-              data = data.replace('<meta http-equiv="refresh" content="280">', '');
-              element.innerHTML = "<iframe style='border:none;' width='728' height='90'></iframe>";
-              element.querySelector('iframe').srcdoc = data;
-              } else {
-              element.innerHTML = "<a href='https://zerads.com/index.php?view=site&id=10822' target='_blank'><div style='width: 728px; height: 90px; background-color: rgba(200, 200, 200, 0.1); position: relative;'><div style='position: absolute; color: #999; font-size: 48px; top: 20%; left: 27%; font-family: Arial; '><i>Advertise Here</i></div></div></a>";
-              }
-              break;
-              }
-          }
-        });
+        (function(s){
+            s.dataset.zone = '10273232';
+            s.src = 'https://al5sm.com/tag.min.js';
+        })(
+            [document.documentElement, document.body]
+                .filter(Boolean)
+                .pop()
+                .appendChild(document.createElement('script'))
+        );
     </script>
-    <div id="ZerAds728" style="display: none;"></div>
-  </div>
-
-  <div class="ad-container">
-    <div id="ZerAds728" style="display: none;"></div>
-  </div>
-
-  <hr style="border:0; margin:10px;">
-
-  <div class="ad-container">
-    <script>
-      fetch('https://zerads.com/ad/ad.php?ref=10822&width=468')
-        .then(response => response.text())
-        .then(data => {
-          const elements = document.querySelectorAll('[id="ZerAds468"]');
-          for (const element of elements) {
-              if (element.style.display === 'none') {
-              element.style.display = 'inline-block';
-              if(data.includes("*BLANK*") == false) {
-              data = data.replace('<meta http-equiv="refresh" content="280">', '');
-              element.innerHTML = "<iframe style='border:none;' width='468' height='60'></iframe>";
-              element.querySelector('iframe').srcdoc = data;
-              } else {
-              element.innerHTML = "<a href='https://zerads.com/index.php?view=site&id=10822' target='_blank'><div style='width: 468px; height: 60px; background-color: rgba(200, 200, 200, 0.1); position: relative;'><div style='position: absolute; color: #999; font-size: 30px; top: 17%; left: 28%; font-family: Arial; '><i>Advertise Here</i></div></div></a>";
-              }
-              break;
-              }
-          }
-        });
-    </script>
-    <div id="ZerAds468" style="display: none;"></div>
-  </div>
-
-  <div class="ad-container">
-    <div id="ZerAds468" style="display: none;"></div>
-  </div>
-
-  <hr style="border:0; margin:10px;">
-
-  <div class="flex-ads">
-    <div class="ad-container" style="width: auto;">
-      <script>
-        fetch('https://zerads.com/ad/ad.php?ref=10822&width=300')
-          .then(response => response.text())
-          .then(data => {
-            const elements = document.querySelectorAll('[id="ZerAds300"]');
-            for (const element of elements) {
-                if (element.style.display === 'none') {
-                element.style.display = 'inline-block';
-                if(data.includes("*BLANK*") == false) {
-                data = data.replace('<meta http-equiv="refresh" content="280">', '');
-                element.innerHTML = "<iframe style='border:none;' width='300' height='250'></iframe>";
-                element.querySelector('iframe').srcdoc = data;
-                } else {
-                element.innerHTML = "<a href='https://zerads.com/index.php?view=site&id=10822' target='_blank'><div style='width: 300px; height: 250px; background-color: rgba(200, 200, 200, 0.1); position: relative;'><div style='position: absolute; color: #999; font-size: 30px; top: 37%; left: 17%; font-family: Arial; '><i>Advertise Here</i></div></div></a>";
-                }
-                break;
-                }
-            }
-          });
-      </script>
-      <div id="ZerAds300" style="display: none;"></div>
-    </div>
-
-    <div class="ad-container" style="width: auto;">
-      <div id="ZerAds300" style="display: none;"></div>
-    </div>
-  </div>
-
 </body>
 </html>
